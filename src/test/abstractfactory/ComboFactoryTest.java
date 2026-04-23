@@ -10,6 +10,6 @@ class ComboFactoryTest {
         ComboFactory combo = new ComboVeganoFactory();
 
         assertEquals("Suco", combo.criarBebida().servir());
-        assertEquals("Doce Vegano", combo.criarSobremesa().servir());
+        assertEquals("Mousse vegano de chocolate", combo.criarSobremesa().servir());
     }
 }
