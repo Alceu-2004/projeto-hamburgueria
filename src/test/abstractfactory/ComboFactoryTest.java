@@ -1,14 +1,15 @@
 package abstractfactory;
 
-public class ComboFactoryTest {
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
-    public static void main(String[] args) {
+class ComboFactoryTest {
+
+    @Test
+    void deveCriarComboVegano() {
         ComboFactory combo = new ComboVeganoFactory();
 
-        if (combo.criarBebida().servir().equals("Suco")) {
-            System.out.println("PASSOU: Abstract Factory");
-        } else {
-            System.out.println("FALHOU");
-        }
+        assertEquals("Suco", combo.criarBebida().servir());
+        assertEquals("Doce Vegano", combo.criarSobremesa().servir());
     }
 }

@@ -1,11 +1,14 @@
 package bridge;
 
-public class BridgeTest {
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
-    public static void main(String[] args) {
-        Pagamento p = new PedidoPagamento(new Pix());
-        p.pagar(20);
+class BridgeTest {
 
-        System.out.println("PASSOU: Bridge");
+    @Test
+    void deveExecutarPagamentoPix() {
+        Pagamento pagamento = new PedidoPagamento(new Pix());
+
+        assertDoesNotThrow(() -> pagamento.pagar(10));
     }
 }

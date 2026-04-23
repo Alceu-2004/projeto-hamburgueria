@@ -1,14 +1,13 @@
 package factorymethod;
 
-public class HamburguerFactoryTest {
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
-    public static void main(String[] args) {
+class HamburguerFactoryTest {
+
+    @Test
+    void deveCriarHamburguerVegano() {
         Hamburguer h = HamburguerFactory.criar("vegano");
-
-        if (h.preparar().equals("Hamburguer Vegano")) {
-            System.out.println("PASSOU: Factory Method");
-        } else {
-            System.out.println("FALHOU");
-        }
+        assertEquals("Hamburguer Vegano", h.preparar());
     }
 }

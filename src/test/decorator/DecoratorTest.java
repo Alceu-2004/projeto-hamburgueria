@@ -1,17 +1,17 @@
 package decorator;
 
 import factorymethod.*;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
-public class DecoratorTest {
+class DecoratorTest {
 
-    public static void main(String[] args) {
+    @Test
+    void deveAdicionarIngredientes() {
         Hamburguer h = HamburguerFactory.criar("simples");
         h = new Bacon(new QueijoExtra(h));
 
-        if (h.preparar().contains("Bacon")) {
-            System.out.println("PASSOU: Decorator");
-        } else {
-            System.out.println("FALHOU");
-        }
+        assertTrue(h.preparar().contains("Bacon"));
+        assertTrue(h.preparar().contains("Queijo"));
     }
 }
