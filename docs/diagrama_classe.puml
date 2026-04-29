@@ -1,0 +1,100 @@
+@startuml
+
+' ======================
+' CONFIGURAÇÃO VISUAL (opcional)
+' ======================
+skinparam classAttributeIconSize 0
+
+' ======================
+' SINGLETON
+' ======================
+package "Singleton" {
+    class ConfiguracaoSistema
+
+    ConfiguracaoSistema --> ConfiguracaoSistema : instancia única
+}
+
+' ======================
+' FACTORY METHOD
+' ======================
+package "Factory Method" {
+    abstract class Hamburguer
+    class HamburguerSimples
+    class HamburguerVegano
+    class HamburguerFactory
+
+    Hamburguer <|-- HamburguerSimples
+    Hamburguer <|-- HamburguerVegano
+    HamburguerFactory --> Hamburguer
+}
+
+' ======================
+' ABSTRACT FACTORY
+' ======================
+package "Abstract Factory" {
+    interface ComboFactory
+    interface Bebida
+    interface Sobremesa
+
+    class ComboTradicionalFactory
+    class ComboVeganoFactory
+
+    ComboFactory <|.. ComboTradicionalFactory
+    ComboFactory <|.. ComboVeganoFactory
+
+    ComboFactory --> Bebida
+    ComboFactory --> Sobremesa
+}
+
+' ======================
+' BRIDGE
+' ======================
+package "Bridge" {
+    interface MetodoPagamento
+    abstract class Pagamento
+    class Pix
+    class CartaoCredito
+    class PedidoPagamento
+
+    MetodoPagamento <|.. Pix
+    MetodoPagamento <|.. CartaoCredito
+
+    Pagamento --> MetodoPagamento
+    Pagamento <|-- PedidoPagamento
+}
+
+' ======================
+' DECORATOR
+' ======================
+package "Decorator" {
+    abstract class HamburguerDecorator
+    class Bacon
+    class QueijoExtra
+
+    Hamburguer <|-- HamburguerDecorator
+    HamburguerDecorator --> Hamburguer
+
+    HamburguerDecorator <|-- Bacon
+    HamburguerDecorator <|-- QueijoExtra
+}
+
+' ======================
+' STATE
+' ======================
+package "State" {
+    interface EstadoPedido
+    class Pedido
+    class PedidoRecebido
+    class PedidoEmPreparo
+    class PedidoPronto
+    class PedidoEntregue
+
+    EstadoPedido <|.. PedidoRecebido
+    EstadoPedido <|.. PedidoEmPreparo
+    EstadoPedido <|.. PedidoPronto
+    EstadoPedido <|.. PedidoEntregue
+
+    Pedido --> EstadoPedido
+}
+
+@enduml
