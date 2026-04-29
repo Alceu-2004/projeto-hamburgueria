@@ -9,6 +9,7 @@ Foram utilizados os seguintes padrões de projeto:
 * Abstract Factory
 * Bridge
 * Decorator
+* State
 
 ## 📊 Diagrama de Classes
 
