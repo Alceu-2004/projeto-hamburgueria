@@ -5,6 +5,7 @@ import factorymethod.*;
 import decorator.*;
 import abstractfactory.*;
 import bridge.*;
+import state.Pedido;
 
 public class Main {
 
@@ -21,5 +22,18 @@ public class Main {
 
         Pagamento pagamento = new PedidoPagamento(new Pix());
         pagamento.pagar(30);
+
+        Pedido pedido = new Pedido();
+
+        System.out.println(pedido.getEstadoAtual());
+        pedido.avancarEstado();
+
+        System.out.println(pedido.getEstadoAtual());
+        pedido.avancarEstado();
+
+        System.out.println(pedido.getEstadoAtual());
+        pedido.avancarEstado();
+
+        System.out.println(pedido.getEstadoAtual());
     }
 }
