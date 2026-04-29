@@ -1,6 +1,0 @@
-factorymethod\HamburguerFactoryTest.class
-state\PedidoTest.class
-singleton\ConfiguracaoSistemaTest.class
-decorator\DecoratorTest.class
-abstractfactory\ComboFactoryTest.class
-bridge\BridgeTest.class
