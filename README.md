@@ -12,7 +12,7 @@ Foram utilizados os seguintes padrões de projeto:
 
 ## 📊 Diagrama de Classes
 
-![Diagrama de Classes](docs/diagrama.png)
+![Diagrama de Classes](docs/diagrama_classe.png)
 
 ## 🚀 Como Executar
 
