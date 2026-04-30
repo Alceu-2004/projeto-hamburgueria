@@ -1,8 +1,12 @@
 # 🍔 Sistema de Hamburgueria com Padrões de Projeto
 
-O sistema foi estruturado para demonstrar, de forma prática e organizada, como diferentes padrões de projeto podem ser aplicados em conjunto para resolver problemas comuns de desenvolvimento.
+O sistema foi desenvolvido para demonstrar, de forma prática e organizada, a aplicação de múltiplos padrões de projeto em um único domínio de negócio: uma hamburgueria.
 
-Foram utilizados os seguintes padrões de projeto:
+A proposta do projeto é simular funcionalidades reais como montagem de pedidos, formas de pagamento, descontos, acompanhamento de status, notificações e atendimento ao cliente, utilizando boas práticas de orientação a objetos.
+
+## 🎯 Padrões de Projeto Utilizados
+
+Foram implementados os seguintes padrões:
 
 * Singleton
 * Factory Method
@@ -10,10 +14,17 @@ Foram utilizados os seguintes padrões de projeto:
 * Bridge
 * Decorator
 * State
+* Observer
+* Strategy
+* Chain of Responsibility
 
 ## 📊 Diagrama de Classes
 
 ![Diagrama de Classes](docs/diagrama_classe.png)
+
+## 🔄 Diagrama de Estados
+
+![Diagrama de Estados](docs/diagrama_estado.png)
 
 ## 🚀 Como Executar
 
