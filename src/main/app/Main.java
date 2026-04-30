@@ -1,5 +1,9 @@
 package app;
 
+import chain.Atendente;
+import chain.Diretor;
+import chain.Gerente;
+import chain.SuporteHandler;
 import observer.Cliente;
 import observer.PedidoObservable;
 import singleton.*;
@@ -39,6 +43,15 @@ public class Main {
 
         desconto.setStrategy(new DescontoClienteFiel());
         System.out.println("Valor com desconto: " + desconto.aplicarDesconto(50.0));
+
+        SuporteHandler atendente = new Atendente();
+        SuporteHandler gerente = new Gerente();
+        SuporteHandler diretor = new Diretor();
+
+        atendente.setProximo(gerente);
+        gerente.setProximo(diretor);
+
+        System.out.println(atendente.atender("reclamacao"));
 
         System.out.println(pedido.getEstadoAtual());
         pedido.avancarEstado();
