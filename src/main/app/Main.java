@@ -8,6 +8,8 @@ import decorator.*;
 import abstractfactory.*;
 import bridge.*;
 import state.Pedido;
+import strategy.DescontoClienteFiel;
+import strategy.DescontoPedido;
 
 public class Main {
 
@@ -32,6 +34,11 @@ public class Main {
 
         pedidoObs.adicionarObserver(cliente);
         pedidoObs.alterarStatus("Saiu para entrega");
+
+        DescontoPedido desconto = new DescontoPedido();
+
+        desconto.setStrategy(new DescontoClienteFiel());
+        System.out.println("Valor com desconto: " + desconto.aplicarDesconto(50.0));
 
         System.out.println(pedido.getEstadoAtual());
         pedido.avancarEstado();
