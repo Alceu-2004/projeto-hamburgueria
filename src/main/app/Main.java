@@ -1,5 +1,7 @@
 package app;
 
+import observer.Cliente;
+import observer.PedidoObservable;
 import singleton.*;
 import factorymethod.*;
 import decorator.*;
@@ -24,6 +26,12 @@ public class Main {
         pagamento.pagar(30);
 
         Pedido pedido = new Pedido();
+
+        PedidoObservable pedidoObs = new PedidoObservable();
+        Cliente cliente = new Cliente("Cliente 1");
+
+        pedidoObs.adicionarObserver(cliente);
+        pedidoObs.alterarStatus("Saiu para entrega");
 
         System.out.println(pedido.getEstadoAtual());
         pedido.avancarEstado();
