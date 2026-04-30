@@ -1,100 +1,133 @@
 @startuml
 
-' ======================
-' CONFIGURAÇÃO VISUAL (opcional)
-' ======================
 skinparam classAttributeIconSize 0
+skinparam shadowing false
+
+title Sistema Hamburgueria - Diagrama de Classes
 
 ' ======================
 ' SINGLETON
 ' ======================
-package "Singleton" {
-    class ConfiguracaoSistema
+class ConfiguracaoSistema
 
-    ConfiguracaoSistema --> ConfiguracaoSistema : instancia única
-}
+ConfiguracaoSistema --> ConfiguracaoSistema : instancia unica
 
 ' ======================
-' FACTORY METHOD
+' FACTORY METHOD + DECORATOR
 ' ======================
-package "Factory Method" {
-    abstract class Hamburguer
-    class HamburguerSimples
-    class HamburguerVegano
-    class HamburguerFactory
+abstract class Hamburguer
+class HamburguerSimples
+class HamburguerVegano
+class HamburguerFactory
 
-    Hamburguer <|-- HamburguerSimples
-    Hamburguer <|-- HamburguerVegano
-    HamburguerFactory --> Hamburguer
-}
+Hamburguer <|-- HamburguerSimples
+Hamburguer <|-- HamburguerVegano
+HamburguerFactory --> Hamburguer
+
+abstract class HamburguerDecorator
+class Bacon
+class QueijoExtra
+
+Hamburguer <|-- HamburguerDecorator
+HamburguerDecorator --> Hamburguer
+HamburguerDecorator <|-- Bacon
+HamburguerDecorator <|-- QueijoExtra
 
 ' ======================
 ' ABSTRACT FACTORY
 ' ======================
-package "Abstract Factory" {
-    interface ComboFactory
-    interface Bebida
-    interface Sobremesa
+interface ComboFactory
+interface Bebida
+interface Sobremesa
 
-    class ComboTradicionalFactory
-    class ComboVeganoFactory
+class ComboTradicionalFactory
+class ComboVeganoFactory
 
-    ComboFactory <|.. ComboTradicionalFactory
-    ComboFactory <|.. ComboVeganoFactory
+ComboFactory <|.. ComboTradicionalFactory
+ComboFactory <|.. ComboVeganoFactory
 
-    ComboFactory --> Bebida
-    ComboFactory --> Sobremesa
-}
+ComboFactory --> Bebida
+ComboFactory --> Sobremesa
 
 ' ======================
 ' BRIDGE
 ' ======================
-package "Bridge" {
-    interface MetodoPagamento
-    abstract class Pagamento
-    class Pix
-    class CartaoCredito
-    class PedidoPagamento
+interface MetodoPagamento
+abstract class Pagamento
+class Pix
+class CartaoCredito
+class PedidoPagamento
 
-    MetodoPagamento <|.. Pix
-    MetodoPagamento <|.. CartaoCredito
+MetodoPagamento <|.. Pix
+MetodoPagamento <|.. CartaoCredito
 
-    Pagamento --> MetodoPagamento
-    Pagamento <|-- PedidoPagamento
-}
+Pagamento --> MetodoPagamento
+Pagamento <|-- PedidoPagamento
 
-' ======================
-' DECORATOR
-' ======================
-package "Decorator" {
-    abstract class HamburguerDecorator
-    class Bacon
-    class QueijoExtra
-
-    Hamburguer <|-- HamburguerDecorator
-    HamburguerDecorator --> Hamburguer
-
-    HamburguerDecorator <|-- Bacon
-    HamburguerDecorator <|-- QueijoExtra
-}
+PedidoPagamento --> Pedido
 
 ' ======================
 ' STATE
 ' ======================
-package "State" {
-    interface EstadoPedido
-    class Pedido
-    class PedidoRecebido
-    class PedidoEmPreparo
-    class PedidoPronto
-    class PedidoEntregue
+interface EstadoPedido
+class Pedido
+class PedidoRecebido
+class PedidoEmPreparo
+class PedidoPronto
+class PedidoEntregue
 
-    EstadoPedido <|.. PedidoRecebido
-    EstadoPedido <|.. PedidoEmPreparo
-    EstadoPedido <|.. PedidoPronto
-    EstadoPedido <|.. PedidoEntregue
+EstadoPedido <|.. PedidoRecebido
+EstadoPedido <|.. PedidoEmPreparo
+EstadoPedido <|.. PedidoPronto
+EstadoPedido <|.. PedidoEntregue
 
-    Pedido --> EstadoPedido
-}
+Pedido --> EstadoPedido
+
+' ======================
+' OBSERVER
+' ======================
+interface Observer
+interface Subject
+
+class Cliente
+class PedidoObservable
+
+Observer <|.. Cliente
+Subject <|.. PedidoObservable
+
+PedidoObservable --> Observer
+PedidoObservable --> Pedido
+
+' ======================
+' STRATEGY
+' ======================
+interface DescontoStrategy
+class DescontoClienteNovo
+class DescontoClienteFiel
+class DescontoPedido
+
+DescontoStrategy <|.. DescontoClienteNovo
+DescontoStrategy <|.. DescontoClienteFiel
+
+DescontoPedido --> DescontoStrategy
+DescontoPedido --> Pedido
+
+' ======================
+' CHAIN OF RESPONSIBILITY
+' ======================
+abstract class SuporteHandler
+class Atendente
+class Gerente
+class Diretor
+
+SuporteHandler <|-- Atendente
+SuporteHandler <|-- Gerente
+SuporteHandler <|-- Diretor
+
+SuporteHandler --> SuporteHandler : proximo
+
+Atendente --> Pedido
+Gerente --> Pedido
+Diretor --> Pedido
 
 @enduml

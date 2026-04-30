@@ -1,0 +1,13 @@
+@startuml
+
+title Pedido - Diagrama de Estados
+
+[*] --> Recebido
+
+Recebido --> EmPreparo : avancar()
+EmPreparo --> Pronto : avancar()
+Pronto --> Entregue : avancar()
+
+Entregue --> [*]
+
+@enduml
