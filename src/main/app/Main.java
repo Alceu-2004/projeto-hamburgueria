@@ -17,6 +17,9 @@ import bridge.*;
 import state.Pedido;
 import strategy.DescontoClienteFiel;
 import strategy.DescontoPedido;
+import templatemethod.PedidoBalcao;
+import templatemethod.PedidoDelivery;
+import templatemethod.PedidoTemplate;
 
 public class Main {
 
@@ -71,6 +74,16 @@ public class Main {
         central.adicionarUsuario(cozinha);
 
         clienteMediator.enviar("Novo pedido");
+
+        System.out.println("\n========== TEMPLATE METHOD ==========");
+
+        PedidoTemplate pedidoBalcao = new PedidoBalcao();
+        pedidoBalcao.processarPedido();
+
+        System.out.println();
+
+        PedidoTemplate pedidoDelivery = new PedidoDelivery();
+        pedidoDelivery.processarPedido();
 
         System.out.println("\n========== STATE ==========");
         Pedido pedido = new Pedido();
