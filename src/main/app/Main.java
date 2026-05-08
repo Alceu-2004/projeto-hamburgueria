@@ -7,6 +7,8 @@ import chain.Atendente;
 import chain.Diretor;
 import chain.Gerente;
 import chain.SuporteHandler;
+import composite.Combo;
+import composite.Produto;
 import facade.CozinhaFacade;
 import mediator.CentralPedidos;
 import mediator.ClienteMediator;
@@ -108,6 +110,21 @@ public class Main {
 
         CozinhaFacade facade = new CozinhaFacade();
         facade.finalizarPedido();
+
+        System.out.println("\n========== COMPOSITE ==========");
+
+        Produto hamburguer = new Produto("Hambúrguer", 20);
+        Produto bebida = new Produto("Refrigerante", 8);
+        Produto sobremesa = new Produto("Sorvete", 10);
+
+        Combo comboComposite = new Combo("Combo Completo");
+
+        comboComposite.adicionarItem(hamburguer);
+        comboComposite.adicionarItem(bebida);
+        comboComposite.adicionarItem(sobremesa);
+
+        System.out.println("Nome do combo: " + comboComposite.getNome());
+        System.out.println("Valor total: R$ " + comboComposite.getPreco());
 
         System.out.println("\n========== STATE ==========");
         Pedido pedido = new Pedido();
