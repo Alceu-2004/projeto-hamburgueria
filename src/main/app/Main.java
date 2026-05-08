@@ -4,6 +4,9 @@ import chain.Atendente;
 import chain.Diretor;
 import chain.Gerente;
 import chain.SuporteHandler;
+import mediator.CentralPedidos;
+import mediator.ClienteMediator;
+import mediator.Cozinha;
 import observer.Cliente;
 import observer.PedidoObservable;
 import singleton.*;
@@ -52,6 +55,16 @@ public class Main {
         gerente.setProximo(diretor);
 
         System.out.println(atendente.atender("reclamacao"));
+
+        CentralPedidos central = new CentralPedidos();
+
+        ClienteMediator clienteMediator = new ClienteMediator(central, "Cliente");
+        Cozinha cozinha = new Cozinha(central, "Cozinha");
+
+        central.adicionarUsuario(clienteMediator);
+        central.adicionarUsuario(cozinha);
+
+        clienteMediator.enviar("Novo pedido");
 
         System.out.println(pedido.getEstadoAtual());
         pedido.avancarEstado();
