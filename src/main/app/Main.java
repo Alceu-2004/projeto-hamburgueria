@@ -22,31 +22,36 @@ public class Main {
 
     public static void main(String[] args) {
 
+        System.out.println("\n========== SINGLETON ==========");
         System.out.println(ConfiguracaoSistema.getInstancia().getStatus());
 
+        System.out.println("\n========== FACTORY METHOD + DECORATOR ==========");
         Hamburguer h = HamburguerFactory.criar("simples");
         h = new Bacon(h);
         System.out.println(h.preparar());
 
+        System.out.println("\n========== ABSTRACT FACTORY ==========");
         ComboFactory combo = new ComboTradicionalFactory();
         System.out.println(combo.criarBebida().servir());
 
+        System.out.println("\n========== BRIDGE ==========");
         Pagamento pagamento = new PedidoPagamento(new Pix());
         pagamento.pagar(30);
 
-        Pedido pedido = new Pedido();
-
+        System.out.println("\n========== OBSERVER ==========");
         PedidoObservable pedidoObs = new PedidoObservable();
         Cliente cliente = new Cliente("Cliente 1");
 
         pedidoObs.adicionarObserver(cliente);
         pedidoObs.alterarStatus("Saiu para entrega");
 
+        System.out.println("\n========== STRATEGY ==========");
         DescontoPedido desconto = new DescontoPedido();
 
         desconto.setStrategy(new DescontoClienteFiel());
         System.out.println("Valor com desconto: " + desconto.aplicarDesconto(50.0));
 
+        System.out.println("\n========== CHAIN OF RESPONSIBILITY ==========");
         SuporteHandler atendente = new Atendente();
         SuporteHandler gerente = new Gerente();
         SuporteHandler diretor = new Diretor();
@@ -56,6 +61,7 @@ public class Main {
 
         System.out.println(atendente.atender("reclamacao"));
 
+        System.out.println("\n========== MEDIATOR ==========");
         CentralPedidos central = new CentralPedidos();
 
         ClienteMediator clienteMediator = new ClienteMediator(central, "Cliente");
@@ -65,6 +71,9 @@ public class Main {
         central.adicionarUsuario(cozinha);
 
         clienteMediator.enviar("Novo pedido");
+
+        System.out.println("\n========== STATE ==========");
+        Pedido pedido = new Pedido();
 
         System.out.println(pedido.getEstadoAtual());
         pedido.avancarEstado();
