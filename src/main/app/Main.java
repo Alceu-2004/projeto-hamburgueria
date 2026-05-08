@@ -1,5 +1,8 @@
 package app;
 
+import builder.PedidoBurger;
+import builder.PedidoBurgerBuilder;
+import builder.PedidoDiretor;
 import chain.Atendente;
 import chain.Diretor;
 import chain.Gerente;
@@ -84,6 +87,21 @@ public class Main {
 
         PedidoTemplate pedidoDelivery = new PedidoDelivery();
         pedidoDelivery.processarPedido();
+
+        System.out.println("\n========== BUILDER ==========");
+
+        PedidoDiretor diretorBuilder = new PedidoDiretor();
+
+        PedidoBurger comboTradicional = diretorBuilder.construirComboTradicional();
+        System.out.println(comboTradicional);
+
+        PedidoBurger personalizado = new PedidoBurgerBuilder()
+                .adicionarHamburguer("Duplo Bacon")
+                .adicionarBebida("Milkshake")
+                .adicionarSobremesa("Brownie")
+                .build();
+
+        System.out.println(personalizado);
 
         System.out.println("\n========== STATE ==========");
         Pedido pedido = new Pedido();
