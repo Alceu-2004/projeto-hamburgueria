@@ -7,6 +7,7 @@ import chain.Atendente;
 import chain.Diretor;
 import chain.Gerente;
 import chain.SuporteHandler;
+import facade.CozinhaFacade;
 import mediator.CentralPedidos;
 import mediator.ClienteMediator;
 import mediator.Cozinha;
@@ -102,6 +103,11 @@ public class Main {
                 .build();
 
         System.out.println(personalizado);
+
+        System.out.println("\n========== FACADE ==========");
+
+        CozinhaFacade facade = new CozinhaFacade();
+        facade.finalizarPedido();
 
         System.out.println("\n========== STATE ==========");
         Pedido pedido = new Pedido();
