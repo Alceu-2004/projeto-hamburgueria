@@ -26,6 +26,8 @@ import strategy.DescontoPedido;
 import templatemethod.PedidoBalcao;
 import templatemethod.PedidoDelivery;
 import templatemethod.PedidoTemplate;
+import memento.PedidoHistorico;
+import memento.PedidoOriginador;
 
 public class Main {
 
@@ -125,6 +127,23 @@ public class Main {
 
         System.out.println("Nome do combo: " + comboComposite.getNome());
         System.out.println("Valor total: R$ " + comboComposite.getPreco());
+
+        System.out.println("\n========== MEMENTO ==========");
+
+        PedidoOriginador pedidoMemento = new PedidoOriginador();
+        PedidoHistorico historico = new PedidoHistorico();
+
+        pedidoMemento.setEstado("Recebido");
+        historico.adicionarMemento(pedidoMemento.salvar());
+
+        pedidoMemento.setEstado("Em preparo");
+        historico.adicionarMemento(pedidoMemento.salvar());
+
+        pedidoMemento.setEstado("Cancelado");
+        System.out.println("Estado atual: " + pedidoMemento.getEstado());
+
+        pedidoMemento.restaurar(historico.getMemento(0));
+        System.out.println("Estado restaurado: " + pedidoMemento.getEstado());
 
         System.out.println("\n========== STATE ==========");
         Pedido pedido = new Pedido();
