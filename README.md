@@ -176,6 +176,30 @@ src/main/state/diagrama/estado/diagrama-estago-state.png
 
 ---
 
+## ✅ Memento
+Responsável por salvar e restaurar estados anteriores dos pedidos.
+
+📍 Diagrama:
+```text
+src/main/memento/diagrama/diagrama-classe-memento.png
+```
+
+![Memento](src/main/memento/diagrama/diagrama-classe.png)
+
+---
+
+## ✅ Visitor
+Permite adicionar operações aos itens do pedido sem modificar suas classes.
+
+📍 Diagrama:
+```text
+src/main/visitor/diagrama/diagrama-classe-visitor.png
+```
+
+![Visitor](src/main/visitor/diagrama/diagrama-classe.png)
+
+---
+
 # 🚀 Como Executar
 
 ## ▶️ Executar aplicação
@@ -215,6 +239,8 @@ src/
 │   ├── facade/
 │   ├── composite/
 │   ├── state/
+│   ├── memento/
+│   ├── visitor/
 │   └── app/
 │
 └── test/
