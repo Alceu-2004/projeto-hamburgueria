@@ -28,6 +28,9 @@ import templatemethod.PedidoDelivery;
 import templatemethod.PedidoTemplate;
 import memento.PedidoHistorico;
 import memento.PedidoOriginador;
+import visitor.BebidaItem;
+import visitor.CalculadoraPrecoVisitor;
+import visitor.HamburguerItem;
 
 public class Main {
 
@@ -144,6 +147,18 @@ public class Main {
 
         pedidoMemento.restaurar(historico.getMemento(0));
         System.out.println("Estado restaurado: " + pedidoMemento.getEstado());
+
+        System.out.println("\n========== VISITOR ==========");
+
+        HamburguerItem hamburguerVisitor = new HamburguerItem(25.0);
+        BebidaItem bebidaVisitor = new BebidaItem(8.0);
+
+        CalculadoraPrecoVisitor calculadora = new CalculadoraPrecoVisitor();
+
+        hamburguerVisitor.aceitar(calculadora);
+        bebidaVisitor.aceitar(calculadora);
+
+        System.out.println("Total do pedido: " + calculadora.getTotal());
 
         System.out.println("\n========== STATE ==========");
         Pedido pedido = new Pedido();
