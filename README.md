@@ -1,6 +1,6 @@
 # 🍔 Sistema de Hamburgueria com Padrões de Projeto
 
-Projeto desenvolvido em Java com o objetivo de demonstrar a aplicação prática de diversos padrões de projeto (Design Patterns) em um sistema de hamburgueria.
+Projeto desenvolvido em Java com o objetivo de demonstrar a aplicação prática de 19 padrões de projeto (Design Patterns) em um sistema de hamburgueria.
 
 O sistema foi evoluindo ao longo das aulas, recebendo novos padrões conforme eram apresentados, resultando em uma aplicação modular, organizada e de fácil manutenção.
 
@@ -13,10 +13,10 @@ Responsável por garantir uma única instância da configuração do sistema.
 
 📍 Diagrama:
 ```text
-src/main/singleton/diagrama/diagrama-classe-singleton.png
+src/main/singleton/diagrama/diagrama-classe.png
 ```
 
-![Singleton](src/main/singleton/diagrama/diagrama-classe-singleton.png)
+![Singleton](src/main/singleton/diagrama/diagrama-classe.png)
 
 ---
 
@@ -25,11 +25,11 @@ O Factory Method é responsável pela criação dos hambúrgueres e o Decorator 
 
 📍 Diagramas:
 ```text
-src/main/factorymethod/diagrama/diagrama-classe-fac-method+decorator.png
-src/main/decorator/diagrama/diagrama-classe-fac-method+decorator.png
+src/main/factorymethod/diagrama/diagrama-classe+decorator.png
+src/main/decorator/diagrama/diagrama-classe+factory_method.png
 ```
 
-![Factory Method](src/main/factorymethod/diagrama/diagrama-classe-fac-method+decorator.png)
+![Factory Method](src/main/factorymethod/diagrama/diagrama-classe+decorator.png)
 
 ---
 
@@ -38,10 +38,10 @@ Responsável pela criação de combos completos da hamburgueria.
 
 📍 Diagrama:
 ```text
-src/main/abstractfactory/diagrama/diagrama-classe-abs-factory.png
+src/main/abstractfactory/diagrama/diagrama-classe.png
 ```
 
-![Abstract Factory](src/main/abstractfactory/diagrama/diagrama-classe-abs-factory.png)
+![Abstract Factory](src/main/abstractfactory/diagrama/diagrama-classe.png)
 
 ---
 
@@ -50,10 +50,10 @@ Separa a abstração do pagamento de sua implementação.
 
 📍 Diagrama:
 ```text
-src/main/bridge/diagrama/diagrama-classe-bridge.png
+src/main/bridge/diagrama/diagrama-classe.png
 ```
 
-![Bridge](src/main/bridge/diagrama/diagrama-classe-bridge.png)
+![Bridge](src/main/bridge/diagrama/diagrama-classe.png)
 
 ---
 
@@ -62,10 +62,10 @@ Permite notificar clientes sobre alterações no status dos pedidos.
 
 📍 Diagrama:
 ```text
-src/main/observer/diagrama/diagrama-classe-observer.png
+src/main/observer/diagrama/diagrama-classe.png
 ```
 
-![Observer](src/main/observer/diagrama/diagrama-classe-observer.png)
+![Observer](src/main/observer/diagrama/diagrama-classe.png)
 
 ---
 
@@ -74,10 +74,10 @@ Responsável pelas estratégias de desconto aplicadas aos pedidos.
 
 📍 Diagrama:
 ```text
-src/main/strategy/diagrama/diagrama-classe-strategy.png
+src/main/strategy/diagrama/diagrama-classe.png
 ```
 
-![Strategy](src/main/strategy/diagrama/diagrama-classe-strategy.png)
+![Strategy](src/main/strategy/diagrama/diagrama-classe.png)
 
 ---
 
@@ -86,10 +86,10 @@ Realiza o encaminhamento de solicitações entre níveis de atendimento.
 
 📍 Diagrama:
 ```text
-src/main/chain/diagrama/diagrama-classe-chain.png
+src/main/chain/diagrama/diagrama-classe.png
 ```
 
-![Chain](src/main/chain/diagrama/diagrama-classe-chain.png)
+![Chain](src/main/chain/diagrama/diagrama-classe.png)
 
 ---
 
@@ -98,10 +98,10 @@ Centraliza a comunicação entre cliente e cozinha.
 
 📍 Diagrama:
 ```text
-src/main/mediator/diagrama/diagrama-classe-mediator.png
+src/main/mediator/diagrama/diagrama-classe.png
 ```
 
-![Mediator](src/main/mediator/diagrama/diagrama-classe-mediator.png)
+![Mediator](src/main/mediator/diagrama/diagrama-classe.png)
 
 ---
 
@@ -110,10 +110,10 @@ Define um fluxo padrão para processamento de pedidos.
 
 📍 Diagrama:
 ```text
-src/main/templatemethod/diagrama/diagrama-classe-template.png
+src/main/templatemethod/diagrama/diagrama-classe.png
 ```
 
-![Template Method](src/main/templatemethod/diagrama/diagrama-classe-template.png)
+![Template Method](src/main/templatemethod/diagrama/diagrama-classe.png)
 
 ---
 
@@ -122,10 +122,10 @@ Responsável pela construção de pedidos personalizados.
 
 📍 Diagrama:
 ```text
-src/main/builder/diagrama/diagrama-classe-builder.png
+src/main/builder/diagrama/diagrama-classe.png
 ```
 
-![Builder](src/main/builder/diagrama/diagrama-classe-builder.png)
+![Builder](src/main/builder/diagrama/diagrama-classe.png)
 
 ---
 
@@ -134,10 +134,10 @@ Centraliza e simplifica o acesso aos serviços internos da hamburgueria.
 
 📍 Diagrama:
 ```text
-src/main/facade/diagrama/diagrama-classe-facade.png
+src/main/facade/diagrama/diagrama-classe.png
 ```
 
-![Facade](src/main/facade/diagrama/diagrama-classe-facade.png)
+![Facade](src/main/facade/diagrama/diagrama-classe.png)
 
 ---
 
@@ -146,10 +146,10 @@ Permite representar produtos individuais e combos compostos.
 
 📍 Diagrama:
 ```text
-src/main/composite/diagrama/diagrama-classe-composite.png
+src/main/composite/diagrama/diagrama-classe.png
 ```
 
-![Composite](src/main/composite/diagrama/diagrama-classe-composite.png)
+![Composite](src/main/composite/diagrama/diagrama-classe.png)
 
 ---
 
@@ -160,16 +160,16 @@ Controla os estados do pedido durante seu fluxo.
 
 📍 Local:
 ```text
-src/main/state/diagrama/classe/diagrama-classe-state.png
+src/main/state/diagrama/classe/diagrama-classe.png
 ```
 
-![State Classe](src/main/state/diagrama/classe/diagrama-classe-state.png)
+![State Classe](src/main/state/diagrama/classe/diagrama-classe.png)
 
 ### 📌 Diagrama de Estados
 
 📍 Local:
 ```text
-src/main/state/diagrama/estado/diagrama-estago-state.png
+src/main/state/diagrama/estado/diagrama-estago.png
 ```
 
 ![State Estado](src/main/state/diagrama/estado/diagrama-estado.png)
@@ -181,7 +181,7 @@ Responsável por salvar e restaurar estados anteriores dos pedidos.
 
 📍 Diagrama:
 ```text
-src/main/memento/diagrama/diagrama-classe-memento.png
+src/main/memento/diagrama/diagrama-classe.png
 ```
 
 ![Memento](src/main/memento/diagrama/diagrama-classe.png)
@@ -193,10 +193,46 @@ Permite adicionar operações aos itens do pedido sem modificar suas classes.
 
 📍 Diagrama:
 ```text
-src/main/visitor/diagrama/diagrama-classe-visitor.png
+src/main/visitor/diagrama/diagrama-classe.png
 ```
 
 ![Visitor](src/main/visitor/diagrama/diagrama-classe.png)
+
+---
+
+## ✅ Flyweight
+Permite compartilhar objetos de ingredientes entre múltiplos pedidos, reduzindo o consumo de memória.
+
+📍 Diagrama:
+```text
+src/main/flyweight/diagrama/diagrama-classe.png
+```
+
+![Flyweight](src/main/flyweight/diagrama/diagrama-classe.png)
+
+---
+
+## ✅ Iterator
+Permite percorrer coleções de pedidos sem expor sua estrutura interna.
+
+📍 Diagrama:
+```text
+src/main/iterator/diagrama/diagrama-classe.png
+```
+
+![Iterator](src/main/iterator/diagrama/diagrama-classe.png)
+
+---
+
+## ✅ Prototype
+Permite criar novos pedidos a partir da clonagem de pedidos existentes.
+
+📍 Diagrama:
+```text
+src/main/prototype/diagrama/diagrama-classe.png
+```
+
+![Prototype](src/main/prototype/diagrama/diagrama-classe.png)
 
 ---
 
@@ -241,6 +277,9 @@ src/
 │   ├── state/
 │   ├── memento/
 │   ├── visitor/
+│   ├── flyweight/
+│   ├── iterator/
+│   ├── prototype/
 │   └── app/
 │
 └── test/
