@@ -35,6 +35,7 @@ import flyweight.Ingrediente;
 import flyweight.IngredienteFactory;
 import iterator.IteradorPedido;
 import iterator.ListaPedidos;
+import prototype.PedidoPersonalizado;
 
 public class Main {
 
@@ -193,6 +194,26 @@ public class Main {
         while (iterator.temProximo()) {
             System.out.println("Pedido: " + iterator.proximo());
         }
+
+        System.out.println("\n========== PROTOTYPE ==========");
+
+        PedidoPersonalizado pedidoOriginal =
+                new PedidoPersonalizado(
+                        "X-Bacon",
+                        "Refrigerante",
+                        "Sorvete"
+                );
+
+        PedidoPersonalizado pedidoClone =
+                (PedidoPersonalizado) pedidoOriginal.clonar();
+
+        pedidoClone.setHamburguer("X-Duplo");
+
+        System.out.println("Original:");
+        System.out.println(pedidoOriginal);
+
+        System.out.println("Clone:");
+        System.out.println(pedidoClone);
 
         System.out.println("\n========== STATE ==========");
         Pedido pedido = new Pedido();
