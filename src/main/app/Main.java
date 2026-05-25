@@ -31,6 +31,8 @@ import memento.PedidoOriginador;
 import visitor.BebidaItem;
 import visitor.CalculadoraPrecoVisitor;
 import visitor.HamburguerItem;
+import flyweight.Ingrediente;
+import flyweight.IngredienteFactory;
 
 public class Main {
 
@@ -159,6 +161,22 @@ public class Main {
         bebidaVisitor.aceitar(calculadora);
 
         System.out.println("Total do pedido: " + calculadora.getTotal());
+
+        System.out.println("\n========== FLYWEIGHT ==========");
+
+        Ingrediente queijo1 =
+                IngredienteFactory.getIngrediente("Queijo");
+
+        Ingrediente queijo2 =
+                IngredienteFactory.getIngrediente("Queijo");
+
+        queijo1.exibir("X-Burger");
+        queijo2.exibir("X-Salada");
+
+        System.out.println(
+                "Ingredientes compartilhados: "
+                        + IngredienteFactory.getQuantidadeIngredientes()
+        );
 
         System.out.println("\n========== STATE ==========");
         Pedido pedido = new Pedido();
