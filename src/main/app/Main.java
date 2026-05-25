@@ -33,7 +33,7 @@ import visitor.CalculadoraPrecoVisitor;
 import visitor.HamburguerItem;
 import flyweight.Ingrediente;
 import flyweight.IngredienteFactory;
-import iterator.IteradorPedido;
+import iterator.IteratorPedido;
 import iterator.ListaPedidos;
 import prototype.PedidoPersonalizado;
 
@@ -189,7 +189,7 @@ public class Main {
         pedidosIterator.adicionarPedido("X-Bacon");
         pedidosIterator.adicionarPedido("Combo Vegano");
 
-        IteradorPedido iterator = pedidosIterator.criarIterador();
+        IteratorPedido iterator = pedidosIterator.criarIterador();
 
         while (iterator.temProximo()) {
             System.out.println("Pedido: " + iterator.proximo());

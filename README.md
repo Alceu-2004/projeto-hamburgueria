@@ -172,7 +172,7 @@ src/main/state/diagrama/classe/diagrama-classe-state.png
 src/main/state/diagrama/estado/diagrama-estago-state.png
 ```
 
-![State Estado](src/main/state/diagrama/estado/diagrama-estago-state.png)
+![State Estado](src/main/state/diagrama/estado/diagrama-estado.png)
 
 ---
 

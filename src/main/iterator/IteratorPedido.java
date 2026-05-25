@@ -1,6 +1,6 @@
 package iterator;
 
-public interface IteradorPedido {
+public interface IteratorPedido {
     boolean temProximo();
     String proximo();
 }

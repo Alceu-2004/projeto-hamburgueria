@@ -16,7 +16,7 @@ public class ListaPedidos implements ColecaoPedidos {
     }
 
     @Override
-    public IteradorPedido criarIterador() {
+    public IteratorPedido criarIterador() {
         return new PedidoIterator(this);
     }
 }

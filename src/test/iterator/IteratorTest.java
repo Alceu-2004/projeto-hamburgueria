@@ -15,7 +15,7 @@ public class IteratorTest {
         pedidos.adicionarPedido("X-Bacon");
         pedidos.adicionarPedido("X-Salada");
 
-        IteradorPedido iterator = pedidos.criarIterador();
+        IteratorPedido iterator = pedidos.criarIterador();
 
         assertEquals("X-Burger", iterator.proximo());
         assertEquals("X-Bacon", iterator.proximo());
@@ -30,7 +30,7 @@ public class IteratorTest {
 
         pedidos.adicionarPedido("Combo Tradicional");
 
-        IteradorPedido iterator = pedidos.criarIterador();
+        IteratorPedido iterator = pedidos.criarIterador();
 
         assertTrue(iterator.temProximo());
     }
@@ -40,7 +40,7 @@ public class IteratorTest {
 
         ListaPedidos pedidos = new ListaPedidos();
 
-        IteradorPedido iterator = pedidos.criarIterador();
+        IteratorPedido iterator = pedidos.criarIterador();
 
         assertFalse(iterator.temProximo());
     }

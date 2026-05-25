@@ -1,6 +1,6 @@
 package iterator;
 
-public class PedidoIterator implements IteradorPedido {
+public class PedidoIterator implements IteratorPedido {
 
     private final ListaPedidos listaPedidos;
     private int posicao = 0;
