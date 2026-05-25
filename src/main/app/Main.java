@@ -33,6 +33,8 @@ import visitor.CalculadoraPrecoVisitor;
 import visitor.HamburguerItem;
 import flyweight.Ingrediente;
 import flyweight.IngredienteFactory;
+import iterator.IteradorPedido;
+import iterator.ListaPedidos;
 
 public class Main {
 
@@ -177,6 +179,20 @@ public class Main {
                 "Ingredientes compartilhados: "
                         + IngredienteFactory.getQuantidadeIngredientes()
         );
+
+        System.out.println("\n========== ITERATOR ==========");
+
+        ListaPedidos pedidosIterator = new ListaPedidos();
+
+        pedidosIterator.adicionarPedido("X-Burger");
+        pedidosIterator.adicionarPedido("X-Bacon");
+        pedidosIterator.adicionarPedido("Combo Vegano");
+
+        IteradorPedido iterator = pedidosIterator.criarIterador();
+
+        while (iterator.temProximo()) {
+            System.out.println("Pedido: " + iterator.proximo());
+        }
 
         System.out.println("\n========== STATE ==========");
         Pedido pedido = new Pedido();
