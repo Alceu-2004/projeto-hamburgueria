@@ -38,6 +38,9 @@ import iterator.ListaPedidos;
 import prototype.PedidoPersonalizado;
 import adapter.AdaptadorPagamento;
 import adapter.GatewayPagamentoAntigo;
+import command.Comando;
+import command.CozinhaCommand;
+import command.FazerPedidoCommand;
 
 public class Main {
 
@@ -68,6 +71,15 @@ public class Main {
                 new AdaptadorPagamento(gateway);
 
         pagamentoAdaptado.pagar(45.0);
+
+        System.out.println("\n========== COMMAND ==========");
+
+        CozinhaCommand cozinhaCommand = new CozinhaCommand();
+
+        Comando comando =
+                new FazerPedidoCommand(cozinhaCommand);
+
+        comando.executar();
 
         System.out.println("\n========== OBSERVER ==========");
         PedidoObservable pedidoObs = new PedidoObservable();
