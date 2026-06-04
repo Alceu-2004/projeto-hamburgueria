@@ -36,6 +36,8 @@ import flyweight.IngredienteFactory;
 import iterator.IteratorPedido;
 import iterator.ListaPedidos;
 import prototype.PedidoPersonalizado;
+import adapter.AdaptadorPagamento;
+import adapter.GatewayPagamentoAntigo;
 
 public class Main {
 
@@ -56,6 +58,16 @@ public class Main {
         System.out.println("\n========== BRIDGE ==========");
         Pagamento pagamento = new PedidoPagamento(new Pix());
         pagamento.pagar(30);
+
+        System.out.println("\n========== ADAPTER ==========");
+
+        GatewayPagamentoAntigo gateway =
+                new GatewayPagamentoAntigo();
+
+        MetodoPagamento pagamentoAdaptado =
+                new AdaptadorPagamento(gateway);
+
+        pagamentoAdaptado.pagar(45.0);
 
         System.out.println("\n========== OBSERVER ==========");
         PedidoObservable pedidoObs = new PedidoObservable();
