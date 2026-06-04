@@ -1,6 +1,6 @@
 # 🍔 Sistema de Hamburgueria com Padrões de Projeto
 
-Projeto desenvolvido em Java com o objetivo de demonstrar a aplicação prática de 22 padrões de projeto (Design Patterns) em um sistema de hamburgueria.
+Projeto desenvolvido em Java com o objetivo de demonstrar a aplicação prática de 23 padrões de projeto (Design Patterns) em um sistema de hamburgueria.
 
 O sistema foi evoluindo ao longo das aulas, recebendo novos padrões conforme eram apresentados, resultando em uma aplicação modular, organizada e de fácil manutenção.
 
@@ -315,6 +315,20 @@ src/main/proxy/diagrama/diagrama-classe.png
 
 ---
 
+## ✅ Interpreter
+
+Permite interpretar expressões e cálculos relacionados aos pedidos da hamburgueria utilizando uma estrutura baseada em gramática e árvore de expressões.
+
+📍 Diagrama:
+
+```text
+src/main/interpreter/diagrama/diagrama-classe.png
+```
+
+![Interpreter](src/main/interpreter/diagrama/diagrama-classe.png)
+
+---
+
 # 🚀 Como Executar
 
 ## ▶️ Executar aplicação
@@ -362,6 +376,7 @@ src/
 │   ├── adapter/
 │   ├── command/
 │   ├── proxy/
+│   ├── interpreter/
 │   └── app/
 │
 └── test/
