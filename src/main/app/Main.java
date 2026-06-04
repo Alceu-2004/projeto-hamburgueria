@@ -41,6 +41,8 @@ import adapter.GatewayPagamentoAntigo;
 import command.Comando;
 import command.CozinhaCommand;
 import command.FazerPedidoCommand;
+import proxy.ProxyRelatorio;
+import proxy.Relatorio;
 
 public class Main {
 
@@ -80,6 +82,13 @@ public class Main {
                 new FazerPedidoCommand(cozinhaCommand);
 
         comando.executar();
+
+        System.out.println("\n========== PROXY ==========");
+
+        Relatorio relatorio = new ProxyRelatorio();
+
+        relatorio.exibir();
+        relatorio.exibir();
 
         System.out.println("\n========== OBSERVER ==========");
         PedidoObservable pedidoObs = new PedidoObservable();
