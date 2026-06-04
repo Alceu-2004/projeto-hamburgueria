@@ -43,6 +43,7 @@ import command.CozinhaCommand;
 import command.FazerPedidoCommand;
 import proxy.ProxyRelatorio;
 import proxy.Relatorio;
+import interpreter.InterpretadorPedido;
 
 public class Main {
 
@@ -247,6 +248,19 @@ public class Main {
 
         System.out.println("Clone:");
         System.out.println(pedidoClone);
+
+        System.out.println("\n========== INTERPRETER ==========");
+
+        InterpretadorPedido interpretador =
+                new InterpretadorPedido();
+
+        double total =
+                interpretador.calcularPedido(
+                        2,
+                        20.0,
+                        5.0);
+
+        System.out.println("Total do pedido: R$ " + total);
 
         System.out.println("\n========== STATE ==========");
         Pedido pedido = new Pedido();
