@@ -6,6 +6,20 @@ O sistema foi evoluindo ao longo das aulas, recebendo novos padrões conforme er
 
 ---
 
+# 🗂️ Diagrama Completo do Sistema
+
+Visão geral contendo todas as classes e relacionamentos dos padrões de projeto implementados na hamburgueria.
+
+📍 Diagrama:
+
+```text
+diagrama-completo/diagrama_classes_hamburgueria.png
+```
+
+![Diagrama Completo](diagrama-completo/diagrama_classes_hamburgueria.png)
+
+---
+
 # 📚 Padrões de Projeto Utilizados
 
 ## ✅ Singleton
@@ -15,25 +29,38 @@ Responsável por garantir uma única instância da configuração do sistema.
 📍 Diagrama:
 
 ```text
-src/main/singleton/diagrama/diagrama-classe.png
+src/main/singleton/diagrama/Singleton.png
 ```
 
-![Singleton](src/main/singleton/diagrama/diagrama-classe.png)
+![Singleton](src/main/singleton/diagrama/Singleton.png)
 
 ---
 
-## ✅ Factory Method + Decorator
+## ✅ Factory Method
 
-O Factory Method é responsável pela criação dos hambúrgueres e o Decorator adiciona ingredientes extras dinamicamente.
+O Factory Method é responsável pela criação dos hambúrgueres.
 
 📍 Diagramas:
 
 ```text
-src/main/factorymethod/diagrama/diagrama-classe+decorator.png
-src/main/decorator/diagrama/diagrama-classe+factory_method.png
+src/main/factorymethod/diagrama/Factory_Method.png
 ```
 
-![Factory Method](src/main/factorymethod/diagrama/diagrama-classe+decorator.png)
+![Factory Method](src/main/factorymethod/diagrama/Factory_Method.png)
+
+---
+
+## ✅ Decorator
+
+O Decorator é responsavel por adicionar ingredientes extras dinamicamente.
+
+📍 Diagramas:
+
+```text
+src/main/decorator/diagrama/Decorator.png
+```
+
+![Decorator](src/main/decorator/diagrama/Decorator.png)
 
 ---
 
@@ -44,10 +71,10 @@ Responsável pela criação de combos completos da hamburgueria.
 📍 Diagrama:
 
 ```text
-src/main/abstractfactory/diagrama/diagrama-classe.png
+src/main/abstractfactory/diagrama/Abstract_Factory.png
 ```
 
-![Abstract Factory](src/main/abstractfactory/diagrama/diagrama-classe.png)
+![Abstract Factory](src/main/abstractfactory/diagrama/Abstract_Factory.png)
 
 ---
 
@@ -58,10 +85,10 @@ Separa a abstração do pagamento de sua implementação.
 📍 Diagrama:
 
 ```text
-src/main/bridge/diagrama/diagrama-classe.png
+src/main/bridge/diagrama/Bridge.png
 ```
 
-![Bridge](src/main/bridge/diagrama/diagrama-classe.png)
+![Bridge](src/main/bridge/diagrama/Bridge.png)
 
 ---
 
@@ -72,10 +99,10 @@ Permite notificar clientes sobre alterações no status dos pedidos.
 📍 Diagrama:
 
 ```text
-src/main/observer/diagrama/diagrama-classe.png
+src/main/observer/diagrama/Observer.png
 ```
 
-![Observer](src/main/observer/diagrama/diagrama-classe.png)
+![Observer](src/main/observer/diagrama/Observer.png)
 
 ---
 
@@ -86,10 +113,10 @@ Responsável pelas estratégias de desconto aplicadas aos pedidos.
 📍 Diagrama:
 
 ```text
-src/main/strategy/diagrama/diagrama-classe.png
+src/main/strategy/diagrama/Strategy.png
 ```
 
-![Strategy](src/main/strategy/diagrama/diagrama-classe.png)
+![Strategy](src/main/strategy/diagrama/Strategy.png)
 
 ---
 
@@ -100,10 +127,10 @@ Realiza o encaminhamento de solicitações entre níveis de atendimento.
 📍 Diagrama:
 
 ```text
-src/main/chain/diagrama/diagrama-classe.png
+src/main/chain/diagrama/Chain_of_Resp.png
 ```
 
-![Chain](src/main/chain/diagrama/diagrama-classe.png)
+![Chain](src/main/chain/diagrama/Chain_of_Resp.png)
 
 ---
 
@@ -114,10 +141,10 @@ Centraliza a comunicação entre cliente e cozinha.
 📍 Diagrama:
 
 ```text
-src/main/mediator/diagrama/diagrama-classe.png
+src/main/mediator/diagrama/Mediator.png
 ```
 
-![Mediator](src/main/mediator/diagrama/diagrama-classe.png)
+![Mediator](src/main/mediator/diagrama/Mediator.png)
 
 ---
 
@@ -128,10 +155,10 @@ Define um fluxo padrão para processamento de pedidos.
 📍 Diagrama:
 
 ```text
-src/main/templatemethod/diagrama/diagrama-classe.png
+src/main/templatemethod/diagrama/Template_Method.png
 ```
 
-![Template Method](src/main/templatemethod/diagrama/diagrama-classe.png)
+![Template Method](src/main/templatemethod/diagrama/Template_Method.png)
 
 ---
 
@@ -142,10 +169,10 @@ Responsável pela construção de pedidos personalizados.
 📍 Diagrama:
 
 ```text
-src/main/builder/diagrama/diagrama-classe.png
+src/main/builder/diagrama/Builder.png
 ```
 
-![Builder](src/main/builder/diagrama/diagrama-classe.png)
+![Builder](src/main/builder/diagrama/Builder.png)
 
 ---
 
@@ -156,10 +183,10 @@ Centraliza e simplifica o acesso aos serviços internos da hamburgueria.
 📍 Diagrama:
 
 ```text
-src/main/facade/diagrama/diagrama-classe.png
+src/main/facade/diagrama/Facade.png
 ```
 
-![Facade](src/main/facade/diagrama/diagrama-classe.png)
+![Facade](src/main/facade/diagrama/Facade.png)
 
 ---
 
@@ -170,10 +197,10 @@ Permite representar produtos individuais e combos compostos.
 📍 Diagrama:
 
 ```text
-src/main/composite/diagrama/diagrama-classe.png
+src/main/composite/diagrama/Composite.png
 ```
 
-![Composite](src/main/composite/diagrama/diagrama-classe.png)
+![Composite](src/main/composite/diagrama/Composite.png)
 
 ---
 
@@ -186,20 +213,20 @@ Controla os estados do pedido durante seu fluxo.
 📍 Local:
 
 ```text
-src/main/state/diagrama/classe/diagrama-classe.png
+src/main/state/diagrama/classe/State.png
 ```
 
-![State Classe](src/main/state/diagrama/classe/diagrama-classe.png)
+![State Classe](src/main/state/diagrama/classe/State.png)
 
 ### 📌 Diagrama de Estados
 
 📍 Local:
 
 ```text
-src/main/state/diagrama/estado/diagrama-estado.png
+src/main/state/diagrama/estado/diagrama_estado.png
 ```
 
-![State Estado](src/main/state/diagrama/estado/diagrama-estado.png)
+![State Estado](src/main/state/diagrama/estado/diagrama_estado.png)
 
 ---
 
@@ -210,10 +237,10 @@ Responsável por salvar e restaurar estados anteriores dos pedidos.
 📍 Diagrama:
 
 ```text
-src/main/memento/diagrama/diagrama-classe.png
+src/main/memento/diagrama/Memento.png
 ```
 
-![Memento](src/main/memento/diagrama/diagrama-classe.png)
+![Memento](src/main/memento/diagrama/Memento.png)
 
 ---
 
@@ -224,10 +251,10 @@ Permite adicionar operações aos itens do pedido sem modificar suas classes.
 📍 Diagrama:
 
 ```text
-src/main/visitor/diagrama/diagrama-classe.png
+src/main/visitor/diagrama/Visitor.png
 ```
 
-![Visitor](src/main/visitor/diagrama/diagrama-classe.png)
+![Visitor](src/main/visitor/diagrama/Visitor.png)
 
 ---
 
@@ -238,10 +265,10 @@ Permite compartilhar objetos de ingredientes entre múltiplos pedidos, reduzindo
 📍 Diagrama:
 
 ```text
-src/main/flyweight/diagrama/diagrama-classe.png
+src/main/flyweight/diagrama/Flyweight.png
 ```
 
-![Flyweight](src/main/flyweight/diagrama/diagrama-classe.png)
+![Flyweight](src/main/flyweight/diagrama/Flyweight.png)
 
 ---
 
@@ -252,10 +279,10 @@ Permite percorrer coleções de pedidos sem expor sua estrutura interna.
 📍 Diagrama:
 
 ```text
-src/main/iterator/diagrama/diagrama-classe.png
+src/main/iterator/diagrama/Iterator.png
 ```
 
-![Iterator](src/main/iterator/diagrama/diagrama-classe.png)
+![Iterator](src/main/iterator/diagrama/Iterator.png)
 
 ---
 
@@ -266,10 +293,10 @@ Permite criar novos pedidos a partir da clonagem de pedidos existentes.
 📍 Diagrama:
 
 ```text
-src/main/prototype/diagrama/diagrama-classe.png
+src/main/prototype/diagrama/Prototype.png
 ```
 
-![Prototype](src/main/prototype/diagrama/diagrama-classe.png)
+![Prototype](src/main/prototype/diagrama/Prototype.png)
 
 ---
 
@@ -280,10 +307,10 @@ Permite integrar sistemas externos ou legados ao sistema de pagamentos da hambur
 📍 Diagrama:
 
 ```text
-src/main/adapter/diagrama/diagrama-classe.png
+src/main/adapter/diagrama/Adapter.png
 ```
 
-![Adapter](src/main/adapter/diagrama/diagrama-classe.png)
+![Adapter](src/main/adapter/diagrama/Adapter.png)
 
 ---
 
@@ -294,10 +321,10 @@ Encapsula solicitações como objetos, permitindo executar operações de pedido
 📍 Diagrama:
 
 ```text
-src/main/command/diagrama/diagrama-classe.png
+src/main/command/diagrama/Command.png
 ```
 
-![Command](src/main/command/diagrama/diagrama-classe.png)
+![Command](src/main/command/diagrama/Command.png)
 
 ---
 
@@ -308,10 +335,10 @@ Controla o acesso a recursos do sistema, adicionando uma camada intermediária p
 📍 Diagrama:
 
 ```text
-src/main/proxy/diagrama/diagrama-classe.png
+src/main/proxy/diagrama/Proxy.png
 ```
 
-![Proxy](src/main/proxy/diagrama/diagrama-classe.png)
+![Proxy](src/main/proxy/diagrama/Proxy.png)
 
 ---
 
@@ -322,10 +349,10 @@ Permite interpretar expressões e cálculos relacionados aos pedidos da hamburgu
 📍 Diagrama:
 
 ```text
-src/main/interpreter/diagrama/diagrama-classe.png
+src/main/interpreter/diagrama/Interpreter.png
 ```
 
-![Interpreter](src/main/interpreter/diagrama/diagrama-classe.png)
+![Interpreter](src/main/interpreter/diagrama/Interpreter.png)
 
 ---
 
